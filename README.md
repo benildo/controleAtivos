@@ -1,6 +1,4 @@
-# controleAtivos
-
-******************************************************************************************
+*****************************************************************************************
 
 				Controle de Ativos de Tecnologia
 
@@ -14,13 +12,15 @@ site no IIS. Segue o passo a passo:
 
 https://pt.stackoverflow.com/questions/213895/como-publicar-site-feito-no-visual-studio
 
+Não esqueça de rodar o script para criação do banco de dados!!!!
+
 Caso tenha problemas de acesso ao BD por meio do seu usuario, de as devidas permissoes 
 conforme mostra o seguinte link:
 
 https://stackoverflow.com/questions/7698286/login-failed-for-user-iis-apppool-asp-net-v4-0
 
 Desenvolvido em ASP.NET MVC (JS, C#, Entity, Bootstrap)
-Desenvolvido por Benildo Barros
+Desenvolvido por Benildo Junior
 E-mail: benildo@gmail.com
 Redes sociais: @benildinho
 
