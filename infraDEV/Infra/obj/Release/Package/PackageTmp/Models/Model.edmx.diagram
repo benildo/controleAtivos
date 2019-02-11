@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="189ac13b93b7455ca319220a44be0e09" Name="Diagram1" ZoomLevel="89">
+        <EntityTypeShape EntityType="AtivosDBModel.Cadeira" Width="1.5" PointX="11.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Celular" Width="1.5" PointX="11.25" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Cftv" Width="1.5" PointX="11.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Email" Width="1.5" PointX="5.25" PointY="63.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Fabricante" Width="1.5" PointX="3" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Fechadura" Width="1.5" PointX="5.25" PointY="72.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Fornecedor" Width="1.5" PointX="6.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModMovel" Width="1.5" PointX="9" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModNobreak" Width="1.5" PointX="5.25" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModPilha" Width="1.5" PointX="6" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModSoftware" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModSwitch" Width="1.5" PointX="11" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModTeclado" Width="1.5" PointX="6" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModTelefone" Width="1.5" PointX="3" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Nobreak" Width="1.5" PointX="13.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Ocorrencia" Width="1.5" PointX="5.25" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Office" Width="1.5" PointX="8.25" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Pilha" Width="1.5" PointX="8.25" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Setor" Width="1.5" PointX="0.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Switch" Width="1.5" PointX="5.25" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Teclado" Width="1.5" PointX="8.25" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtivosDBModel.Window" Width="1.5" PointX="5.25" PointY="21.125" IsExpanded="true" />
+        <AssociationConnector Association="AtivosDBModel.FK_Cadeira_ModModel" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Celular_ModTelefone" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModMovel_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModNobreak_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModPilhas_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModSoftware_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModSwitch_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModTeclado_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModTelefone_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Nobreak_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Switch_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Teclado_Fabricante" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModMovel_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModSwitch_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModTeclado_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModTelefone_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Pilha_ModPilha" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Office_ModSoftware" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Windows_ModSoftware" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Teclado_ModTeclado" ManuallyRouted="false" />
+        <AssociationConnector Association="AtivosDBModel.FK_Switch_Setor" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AtivosDBModel.Plaqueta" Width="1.5" PointX="3" PointY="35.125" />
+        <AssociationConnector Association="AtivosDBModel.FK_Cadeira_Plaqueta" />
+        <AssociationConnector Association="AtivosDBModel.FK_Cftv_Plaqueta" />
+        <AssociationConnector Association="AtivosDBModel.FK_Nobreak_Plaqueta" />
+        <AssociationConnector Association="AtivosDBModel.FK_Ocorrencia_Plaqueta" />
+        <AssociationConnector Association="AtivosDBModel.FK_Switch_Plaqueta" />
+        <AssociationConnector Association="AtivosDBModel.FK_Teclado_Plaqueta" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModImpressora" Width="1.5" PointX="14" PointY="25.125" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModImpressoras_Fabricante" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModImpressoras_Fornecedor" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModCftv" Width="1.5" PointX="5.25" PointY="13.5" />
+        <AssociationConnector Association="AtivosDBModel.FK_Cftv_ModCftv" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModCftv_Fabricante" />
+        <EntityTypeShape EntityType="AtivosDBModel.Ramal" Width="1.5" PointX="5.25" PointY="33.25" />
+        <AssociationConnector Association="AtivosDBModel.FK_Ramal_ModTelefone" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModPc" Width="1.5" PointX="15" PointY="18" />
+        <EntityTypeShape EntityType="AtivosDBModel.Pc" Width="1.5" PointX="17.25" PointY="26.625" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModPc_Fabricante" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModPc_Fornecedor" />
+        <AssociationConnector Association="AtivosDBModel.FK_Pc_ModPc" />
+        <AssociationConnector Association="AtivosDBModel.FK_Pc_Plaqueta" />
+        <EntityTypeShape EntityType="AtivosDBModel.ModMonitor" Width="1.5" PointX="12" PointY="17.25" />
+        <EntityTypeShape EntityType="AtivosDBModel.Monitor" Width="1.5" PointX="14.25" PointY="28.5" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModMonitor_Fabricante" />
+        <AssociationConnector Association="AtivosDBModel.FK_Monitor_Fabricante" />
+        <AssociationConnector Association="AtivosDBModel.FK_ModMonitor_Fornecedor" />
+        <AssociationConnector Association="AtivosDBModel.FK_Monitor_ModMonitor" />
+        <AssociationConnector Association="AtivosDBModel.FK_Monitor_Plaqueta" />
+        <EntityTypeShape EntityType="AtivosDBModel.Movei" Width="1.5" PointX="11.25" PointY="28.5" />
+        <AssociationConnector Association="AtivosDBModel.FK_Moveis_ModMoveis" />
+        <AssociationConnector Association="AtivosDBModel.FK_Moveis_Plaqueta" />
+        <EntityTypeShape EntityType="AtivosDBModel.Impressora" Width="1.5" PointX="17.25" PointY="31.625" />
+        <AssociationConnector Association="AtivosDBModel.FK_Impressora_ModImpressora" />
+        <AssociationConnector Association="AtivosDBModel.FK_Impressora_Plaqueta" />
+        <EntityTypeShape EntityType="AtivosDBModel.Funcionario" Width="1.5" PointX="3" PointY="14" />
+        <AssociationConnector Association="AtivosDBModel.FK_Cadeira_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Celular_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Email_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Fechadura_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Funcionario_Setor" />
+        <AssociationConnector Association="AtivosDBModel.FK_Impressora_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Monitor_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Moveis_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Ocorrencia_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Office_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Pc_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Pilha_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Ramal_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Switch_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Teclado_Funcionario" />
+        <AssociationConnector Association="AtivosDBModel.FK_Windows_Funcionario" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

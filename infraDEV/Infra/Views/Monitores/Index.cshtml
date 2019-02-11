@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Infra.Models.Monitor>
+
+@{
+    ViewBag.Title = "Index";
+}    
+    <h2>Monitores</h2>
+    <p>
+        @Html.ActionLink("Adicionar", "Create")
+    </p>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Buscar responsável: @Html.TextBox("SearchString")
+            <input type="submit" value="Buscar" />
+        </p>
+    }
+    <table class="table table-hover">
+        <tr>
+            <th>
+                Fabricante
+            </th>
+            <th>
+                @Html.ActionLink("Responsável", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                @Html.ActionLink("Plaqueta", "Index", new { sortOrder = ViewBag.PlaquetaSortParm })
+            </th>            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fabricante.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModMonitor.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plaqueta.PlaquetaID)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.MonitorID }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.MonitorID }) |
+                    @Html.ActionLink("Apagar", "Delete", new { id = item.MonitorID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+

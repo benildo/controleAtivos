@@ -1,0 +1,26 @@
+﻿@model Infra.Models.Plaqueta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Plaqueta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PlaquetaID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

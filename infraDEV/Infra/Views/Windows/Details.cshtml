@@ -1,0 +1,50 @@
+﻿@model Infra.Models.Window
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhe</h2>
+
+<div>
+    <h4>Window</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModSoftware.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModSoftware.Modelo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.WindowsID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

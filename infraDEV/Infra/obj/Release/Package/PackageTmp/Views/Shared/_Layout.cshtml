@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Target MP - Todos os direitos reservados.</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/Home/">
+            <img src="~/Content/logo.png" width="200" height="54" class="d-inline-block align-top" alt="" />            
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Empresa
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Funcionarios/">Funcionarios</a>
+                        <a class="dropdown-item" href="/Fabricantes/">Fabricantes</a>
+                        <a class="dropdown-item" href="/Fornecedores/">Fornecedores</a>
+                        <a class="dropdown-item" href="/Setors/">Setores</a>
+                        <a class="dropdown-item" href="/Emails/">Emails</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Moveis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Cadeiras/">Cadeiras</a>
+                        <a class="dropdown-item" href="/Moveis/">Moveis</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Modelos</div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/ModMoveis/">Moveis</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tecnologia
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Pc/">Pcs</a>
+                        <a class="dropdown-item" href="/Teclados/">Teclados</a>
+                        <a class="dropdown-item" href="/Monitores/">Monitores</a>
+                        <a class="dropdown-item" href="/Impressoras/">Impressoras</a>
+                        <a class="dropdown-item" href="/Cftvs/">Cftv</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Modelos</div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/ModPc/">Pcs</a>
+                        <a class="dropdown-item" href="/ModTeclados/">Teclados</a>
+                        <a class="dropdown-item" href="/ModMonitor/">Monitores</a>
+                        <a class="dropdown-item" href="/ModImpressoras/">Impressora</a>
+                        <a class="dropdown-item" href="/ModCftvs/">Cftv</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Software
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Offices/">Office</a>
+                        <a class="dropdown-item" href="/Windows/">Windows</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Modelos</div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/ModSoftwares/">Software</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Telefonia
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Ramals/">Ramais</a>
+                        <a class="dropdown-item" href="/Celulares/">Celulares</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Modelos</div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/ModTelefones/">Telefone</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nome" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+                    Buscar
+                </button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <hr />
+        <hr />        
+        <hr />
+        <hr />
+        <div>
+            @RenderBody()
+            <footer>
+                <hr />
+                <p>&copy; @DateTime.Now.Year - Target MP - Todos os direitos reservados.</p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("Scripts", required: false)
+    </div>
+</body>
+</html>

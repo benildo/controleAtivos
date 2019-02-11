@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Infra.Models.Celular>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Celulares</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr>  
+        <th>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imei)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.ModTelefone.Modelo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imei)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Serial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModTelefone.Modelo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.CelularID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.CelularID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id = item.CelularID })
+        </td>
+    </tr>
+}
+
+</table>
+

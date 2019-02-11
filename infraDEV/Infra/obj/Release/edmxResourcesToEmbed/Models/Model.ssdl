@@ -1,0 +1,1307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtivosDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cadeira">
+    <Key>
+      <PropertyRef Name="CadeiraID" />
+    </Key>
+    <Property Name="CadeiraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="ModModelID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+    <Property Name="Data" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Celular">
+    <Key>
+      <PropertyRef Name="CelularID" />
+    </Key>
+    <Property Name="CelularID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModTelefoneID" Type="int" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="Imei" Type="nvarchar" MaxLength="255" />
+    <Property Name="Serial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Cftv">
+    <Key>
+      <PropertyRef Name="CftvID" />
+    </Key>
+    <Property Name="CftvID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModCftvID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+    <Property Name="Local" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="Conta" Type="nvarchar" MaxLength="255" />
+    <Property Name="Senha" Type="nvarchar" MaxLength="255" />
+    <Property Name="Finalidade" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Fabricante">
+    <Key>
+      <PropertyRef Name="IdFabricante" />
+    </Key>
+    <Property Name="IdFabricante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Fechadura">
+    <Key>
+      <PropertyRef Name="FechaduraID" />
+    </Key>
+    <Property Name="FechaduraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="NumeroCadastrado" Type="int" />
+  </EntityType>
+  <EntityType Name="Fornecedor">
+    <Key>
+      <PropertyRef Name="FornecedorID" />
+    </Key>
+    <Property Name="FornecedorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="FuncionarioID" />
+    </Key>
+    <Property Name="FuncionarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+    <Property Name="SetorID" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="DataAdmissao" Type="date" />
+    <Property Name="Cargo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Aniversario" Type="date" />
+  </EntityType>
+  <EntityType Name="Impressora">
+    <Key>
+      <PropertyRef Name="ImpressoraID" />
+    </Key>
+    <Property Name="ImpressoraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="ModImpressoraID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModCftv">
+    <Key>
+      <PropertyRef Name="ModCftvID" />
+    </Key>
+    <Property Name="ModCftvID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ModImpressoras">
+    <Key>
+      <PropertyRef Name="ModImpressoraID" />
+    </Key>
+    <Property Name="ModImpressoraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nchar" MaxLength="10" />
+    <Property Name="Fabricante" Type="int" />
+    <Property Name="Fornecedor" Type="int" />
+  </EntityType>
+  <EntityType Name="ModMonitor">
+    <Key>
+      <PropertyRef Name="ModMonitorID" />
+    </Key>
+    <Property Name="ModMonitorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="FornecedorID" Type="int" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ModMovel">
+    <Key>
+      <PropertyRef Name="ModMovelID" />
+    </Key>
+    <Property Name="ModMovelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="Referencia" Type="nvarchar" MaxLength="255" />
+    <Property Name="FornecedorID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModNobreak">
+    <Key>
+      <PropertyRef Name="ModNobreakID" />
+    </Key>
+    <Property Name="ModNobreakID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModPc">
+    <Key>
+      <PropertyRef Name="ModPcID" />
+    </Key>
+    <Property Name="ModPcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="Processador" Type="nvarchar" MaxLength="50" />
+    <Property Name="Memoria" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FornecedorID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModPilhas">
+    <Key>
+      <PropertyRef Name="ModPilhaID" />
+    </Key>
+    <Property Name="ModPilhaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="Serie" Type="int" />
+  </EntityType>
+  <EntityType Name="ModSoftware">
+    <Key>
+      <PropertyRef Name="ModSoftwareID" />
+    </Key>
+    <Property Name="ModSoftwareID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModSwitch">
+    <Key>
+      <PropertyRef Name="ModSwitchID" />
+    </Key>
+    <Property Name="ModSwitchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="FornecedorID" Type="int" />
+  </EntityType>
+  <EntityType Name="ModTeclado">
+    <Key>
+      <PropertyRef Name="ModTecladoID" />
+    </Key>
+    <Property Name="ModTecladoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FornecedorID" Type="int" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ModTelefone">
+    <Key>
+      <PropertyRef Name="ModTelefoneID" />
+    </Key>
+    <Property Name="ModTelefoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="255" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="FornecedorID" Type="int" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="MonitorID" />
+    </Key>
+    <Property Name="MonitorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="Modelo" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Moveis">
+    <Key>
+      <PropertyRef Name="MovelID" />
+    </Key>
+    <Property Name="MovelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="Modelo" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Nobreak">
+    <Key>
+      <PropertyRef Name="NobreakID" />
+    </Key>
+    <Property Name="NobreakID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modelo" Type="int" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Ocorrencia">
+    <Key>
+      <PropertyRef Name="OcorrenciaID" />
+    </Key>
+    <Property Name="OcorrenciaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaquetaID" Type="int" />
+    <Property Name="Descrição" Type="nvarchar(max)" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="Data" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Name="OfficeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModSoftwareID" Type="int" />
+    <Property Name="Chave" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ativado" Type="bit" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+  </EntityType>
+  <EntityType Name="Pc">
+    <Key>
+      <PropertyRef Name="PcID" />
+    </Key>
+    <Property Name="PcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="ModPcID" Type="int" />
+    <Property Name="NomePc" Type="nvarchar" MaxLength="255" />
+    <Property Name="Série" Type="nvarchar" MaxLength="255" />
+    <Property Name="PlaquetaID" Type="int" Nullable="false" />
+    <Property Name="Auditorado" Type="bit" Nullable="false" />
+    <Property Name="DataCompra" Type="date" />
+    <Property Name="Preço" Type="real" />
+  </EntityType>
+  <EntityType Name="Pilha">
+    <Key>
+      <PropertyRef Name="PilhaID" />
+    </Key>
+    <Property Name="PilhaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="ModPilhaID" Type="int" />
+    <Property Name="Data" Type="date" />
+  </EntityType>
+  <EntityType Name="Plaqueta">
+    <Key>
+      <PropertyRef Name="PlaquetaID" />
+    </Key>
+    <Property Name="PlaquetaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ativada" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ramal">
+    <Key>
+      <PropertyRef Name="RamalID" />
+    </Key>
+    <Property Name="RamalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="ModTelefoneID" Type="int" />
+    <Property Name="Mac" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Numero" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Setor">
+    <Key>
+      <PropertyRef Name="SetorID" />
+    </Key>
+    <Property Name="SetorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Switch">
+    <Key>
+      <PropertyRef Name="SwitchID" />
+    </Key>
+    <Property Name="SwitchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="SetorID" Type="int" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Teclado">
+    <Key>
+      <PropertyRef Name="TecladoID" />
+    </Key>
+    <Property Name="TecladoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="FabricanteID" Type="int" />
+    <Property Name="ModTecladoID" Type="int" />
+    <Property Name="PlaquetaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Windows">
+    <Key>
+      <PropertyRef Name="WindowsID" />
+    </Key>
+    <Property Name="WindowsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModSoftwareID" Type="int" />
+    <Property Name="Serial" Type="nvarchar" MaxLength="255" />
+    <Property Name="FuncionarioID" Type="int" />
+    <Property Name="Ativado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Cadeira_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Cadeira" Type="Self.Cadeira" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Cadeira">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cadeira_ModModel">
+    <End Role="ModMovel" Type="Self.ModMovel" Multiplicity="0..1" />
+    <End Role="Cadeira" Type="Self.Cadeira" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModMovel">
+        <PropertyRef Name="ModMovelID" />
+      </Principal>
+      <Dependent Role="Cadeira">
+        <PropertyRef Name="ModModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cadeira_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Cadeira" Type="Self.Cadeira" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Cadeira">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Celular_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Celular" Type="Self.Celular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Celular">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Celular_ModTelefone">
+    <End Role="ModTelefone" Type="Self.ModTelefone" Multiplicity="0..1" />
+    <End Role="Celular" Type="Self.Celular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModTelefone">
+        <PropertyRef Name="ModTelefoneID" />
+      </Principal>
+      <Dependent Role="Celular">
+        <PropertyRef Name="ModTelefoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cftv_ModCftv">
+    <End Role="ModCftv" Type="Self.ModCftv" Multiplicity="0..1" />
+    <End Role="Cftv" Type="Self.Cftv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModCftv">
+        <PropertyRef Name="ModCftvID" />
+      </Principal>
+      <Dependent Role="Cftv">
+        <PropertyRef Name="ModCftvID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cftv_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Cftv" Type="Self.Cftv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Cftv">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Email_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fechadura_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Fechadura" Type="Self.Fechadura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Fechadura">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funcionario_Setor">
+    <End Role="Setor" Type="Self.Setor" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setor">
+        <PropertyRef Name="SetorID" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="SetorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Impressora_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Impressora" Type="Self.Impressora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Impressora">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Impressora_ModImpressora">
+    <End Role="ModImpressoras" Type="Self.ModImpressoras" Multiplicity="0..1" />
+    <End Role="Impressora" Type="Self.Impressora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModImpressoras">
+        <PropertyRef Name="ModImpressoraID" />
+      </Principal>
+      <Dependent Role="Impressora">
+        <PropertyRef Name="ModImpressoraID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Impressora_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Impressora" Type="Self.Impressora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Impressora">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModCftv_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="1" />
+    <End Role="ModCftv" Type="Self.ModCftv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModCftv">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModImpressoras_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModImpressoras" Type="Self.ModImpressoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModImpressoras">
+        <PropertyRef Name="Fabricante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModImpressoras_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModImpressoras" Type="Self.ModImpressoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModImpressoras">
+        <PropertyRef Name="Fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModMonitor_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModMonitor" Type="Self.ModMonitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModMonitor">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModMonitor_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModMonitor" Type="Self.ModMonitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModMonitor">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModMovel_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModMovel" Type="Self.ModMovel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModMovel">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModMovel_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModMovel" Type="Self.ModMovel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModMovel">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModNobreak_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModNobreak" Type="Self.ModNobreak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModNobreak">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModPc_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModPc" Type="Self.ModPc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModPc">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModPc_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModPc" Type="Self.ModPc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModPc">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModPilhas_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModPilhas" Type="Self.ModPilhas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModPilhas">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModSoftware_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModSoftware" Type="Self.ModSoftware" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModSoftware">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModSwitch_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModSwitch" Type="Self.ModSwitch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModSwitch">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModSwitch_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModSwitch" Type="Self.ModSwitch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModSwitch">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModTeclado_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModTeclado" Type="Self.ModTeclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModTeclado">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModTeclado_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModTeclado" Type="Self.ModTeclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModTeclado">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModTelefone_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="ModTelefone" Type="Self.ModTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="ModTelefone">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModTelefone_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="ModTelefone" Type="Self.ModTelefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorID" />
+      </Principal>
+      <Dependent Role="ModTelefone">
+        <PropertyRef Name="FornecedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moveis_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Moveis" Type="Self.Moveis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Moveis">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moveis_ModMoveis">
+    <End Role="ModMovel" Type="Self.ModMovel" Multiplicity="1" />
+    <End Role="Moveis" Type="Self.Moveis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ModMovel">
+        <PropertyRef Name="ModMovelID" />
+      </Principal>
+      <Dependent Role="Moveis">
+        <PropertyRef Name="MovelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moveis_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Moveis" Type="Self.Moveis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Moveis">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nobreak_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Nobreak" Type="Self.Nobreak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="Nobreak">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nobreak_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Nobreak" Type="Self.Nobreak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Nobreak">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ocorrencia_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Ocorrencia" Type="Self.Ocorrencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Ocorrencia">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ocorrencia_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Ocorrencia" Type="Self.Ocorrencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Ocorrencia">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Office_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Office" Type="Self.Office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Office">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Office_ModSoftware">
+    <End Role="ModSoftware" Type="Self.ModSoftware" Multiplicity="0..1" />
+    <End Role="Office" Type="Self.Office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModSoftware">
+        <PropertyRef Name="ModSoftwareID" />
+      </Principal>
+      <Dependent Role="Office">
+        <PropertyRef Name="ModSoftwareID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pc_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Pc" Type="Self.Pc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Pc">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pc_ModPc">
+    <End Role="ModPc" Type="Self.ModPc" Multiplicity="0..1" />
+    <End Role="Pc" Type="Self.Pc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModPc">
+        <PropertyRef Name="ModPcID" />
+      </Principal>
+      <Dependent Role="Pc">
+        <PropertyRef Name="ModPcID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pc_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="1" />
+    <End Role="Pc" Type="Self.Pc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Pc">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pilha_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Pilha" Type="Self.Pilha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Pilha">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pilha_ModPilha">
+    <End Role="ModPilhas" Type="Self.ModPilhas" Multiplicity="1" />
+    <End Role="Pilha" Type="Self.Pilha" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ModPilhas">
+        <PropertyRef Name="ModPilhaID" />
+      </Principal>
+      <Dependent Role="Pilha">
+        <PropertyRef Name="PilhaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ramal_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Ramal" Type="Self.Ramal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Ramal">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ramal_ModTelefone">
+    <End Role="ModTelefone" Type="Self.ModTelefone" Multiplicity="0..1" />
+    <End Role="Ramal" Type="Self.Ramal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModTelefone">
+        <PropertyRef Name="ModTelefoneID" />
+      </Principal>
+      <Dependent Role="Ramal">
+        <PropertyRef Name="ModTelefoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Switch_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Switch" Type="Self.Switch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="Switch">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Switch_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Switch" Type="Self.Switch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Switch">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Switch_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Switch" Type="Self.Switch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Switch">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Switch_Setor">
+    <End Role="Setor" Type="Self.Setor" Multiplicity="0..1" />
+    <End Role="Switch" Type="Self.Switch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setor">
+        <PropertyRef Name="SetorID" />
+      </Principal>
+      <Dependent Role="Switch">
+        <PropertyRef Name="SetorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teclado_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Teclado" Type="Self.Teclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="IdFabricante" />
+      </Principal>
+      <Dependent Role="Teclado">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teclado_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Teclado" Type="Self.Teclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Teclado">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teclado_ModTeclado">
+    <End Role="ModTeclado" Type="Self.ModTeclado" Multiplicity="0..1" />
+    <End Role="Teclado" Type="Self.Teclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModTeclado">
+        <PropertyRef Name="ModTecladoID" />
+      </Principal>
+      <Dependent Role="Teclado">
+        <PropertyRef Name="ModTecladoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teclado_Plaqueta">
+    <End Role="Plaqueta" Type="Self.Plaqueta" Multiplicity="0..1" />
+    <End Role="Teclado" Type="Self.Teclado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaqueta">
+        <PropertyRef Name="PlaquetaID" />
+      </Principal>
+      <Dependent Role="Teclado">
+        <PropertyRef Name="PlaquetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Windows_Funcionario">
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="0..1" />
+    <End Role="Windows" Type="Self.Windows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="FuncionarioID" />
+      </Principal>
+      <Dependent Role="Windows">
+        <PropertyRef Name="FuncionarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Windows_ModSoftware">
+    <End Role="ModSoftware" Type="Self.ModSoftware" Multiplicity="0..1" />
+    <End Role="Windows" Type="Self.Windows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModSoftware">
+        <PropertyRef Name="ModSoftwareID" />
+      </Principal>
+      <Dependent Role="Windows">
+        <PropertyRef Name="ModSoftwareID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AtivosDBModelStoreContainer">
+    <EntitySet Name="Cadeira" EntityType="Self.Cadeira" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Celular" EntityType="Self.Celular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cftv" EntityType="Self.Cftv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fabricante" EntityType="Self.Fabricante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fechadura" EntityType="Self.Fechadura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Impressora" EntityType="Self.Impressora" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModCftv" EntityType="Self.ModCftv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModImpressoras" EntityType="Self.ModImpressoras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModMonitor" EntityType="Self.ModMonitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModMovel" EntityType="Self.ModMovel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModNobreak" EntityType="Self.ModNobreak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModPc" EntityType="Self.ModPc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModPilhas" EntityType="Self.ModPilhas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModSoftware" EntityType="Self.ModSoftware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModSwitch" EntityType="Self.ModSwitch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModTeclado" EntityType="Self.ModTeclado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModTelefone" EntityType="Self.ModTelefone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Moveis" EntityType="Self.Moveis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nobreak" EntityType="Self.Nobreak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ocorrencia" EntityType="Self.Ocorrencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Office" EntityType="Self.Office" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pc" EntityType="Self.Pc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pilha" EntityType="Self.Pilha" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plaqueta" EntityType="Self.Plaqueta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ramal" EntityType="Self.Ramal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setor" EntityType="Self.Setor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Switch" EntityType="Self.Switch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teclado" EntityType="Self.Teclado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Windows" EntityType="Self.Windows" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cadeira_Funcionario" Association="Self.FK_Cadeira_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Cadeira" EntitySet="Cadeira" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cadeira_ModModel" Association="Self.FK_Cadeira_ModModel">
+      <End Role="ModMovel" EntitySet="ModMovel" />
+      <End Role="Cadeira" EntitySet="Cadeira" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cadeira_Plaqueta" Association="Self.FK_Cadeira_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Cadeira" EntitySet="Cadeira" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Celular_Funcionario" Association="Self.FK_Celular_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Celular" EntitySet="Celular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Celular_ModTelefone" Association="Self.FK_Celular_ModTelefone">
+      <End Role="ModTelefone" EntitySet="ModTelefone" />
+      <End Role="Celular" EntitySet="Celular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cftv_ModCftv" Association="Self.FK_Cftv_ModCftv">
+      <End Role="ModCftv" EntitySet="ModCftv" />
+      <End Role="Cftv" EntitySet="Cftv" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cftv_Plaqueta" Association="Self.FK_Cftv_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Cftv" EntitySet="Cftv" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Email_Funcionario" Association="Self.FK_Email_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fechadura_Funcionario" Association="Self.FK_Fechadura_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Fechadura" EntitySet="Fechadura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funcionario_Setor" Association="Self.FK_Funcionario_Setor">
+      <End Role="Setor" EntitySet="Setor" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Impressora_Funcionario" Association="Self.FK_Impressora_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Impressora" EntitySet="Impressora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Impressora_ModImpressora" Association="Self.FK_Impressora_ModImpressora">
+      <End Role="ModImpressoras" EntitySet="ModImpressoras" />
+      <End Role="Impressora" EntitySet="Impressora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Impressora_Plaqueta" Association="Self.FK_Impressora_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Impressora" EntitySet="Impressora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModCftv_Fabricante" Association="Self.FK_ModCftv_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModCftv" EntitySet="ModCftv" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModImpressoras_Fabricante" Association="Self.FK_ModImpressoras_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModImpressoras" EntitySet="ModImpressoras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModImpressoras_Fornecedor" Association="Self.FK_ModImpressoras_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModImpressoras" EntitySet="ModImpressoras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModMonitor_Fabricante" Association="Self.FK_ModMonitor_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModMonitor" EntitySet="ModMonitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModMonitor_Fornecedor" Association="Self.FK_ModMonitor_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModMonitor" EntitySet="ModMonitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModMovel_Fabricante" Association="Self.FK_ModMovel_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModMovel" EntitySet="ModMovel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModMovel_Fornecedor" Association="Self.FK_ModMovel_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModMovel" EntitySet="ModMovel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModNobreak_Fabricante" Association="Self.FK_ModNobreak_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModNobreak" EntitySet="ModNobreak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModPc_Fabricante" Association="Self.FK_ModPc_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModPc" EntitySet="ModPc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModPc_Fornecedor" Association="Self.FK_ModPc_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModPc" EntitySet="ModPc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModPilhas_Fabricante" Association="Self.FK_ModPilhas_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModPilhas" EntitySet="ModPilhas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModSoftware_Fabricante" Association="Self.FK_ModSoftware_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModSoftware" EntitySet="ModSoftware" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModSwitch_Fabricante" Association="Self.FK_ModSwitch_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModSwitch" EntitySet="ModSwitch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModSwitch_Fornecedor" Association="Self.FK_ModSwitch_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModSwitch" EntitySet="ModSwitch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModTeclado_Fabricante" Association="Self.FK_ModTeclado_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModTeclado" EntitySet="ModTeclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModTeclado_Fornecedor" Association="Self.FK_ModTeclado_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModTeclado" EntitySet="ModTeclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModTelefone_Fabricante" Association="Self.FK_ModTelefone_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="ModTelefone" EntitySet="ModTelefone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModTelefone_Fornecedor" Association="Self.FK_ModTelefone_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="ModTelefone" EntitySet="ModTelefone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Fabricante" Association="Self.FK_Monitor_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Funcionario" Association="Self.FK_Monitor_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Plaqueta" Association="Self.FK_Monitor_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moveis_Funcionario" Association="Self.FK_Moveis_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Moveis" EntitySet="Moveis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moveis_ModMoveis" Association="Self.FK_Moveis_ModMoveis">
+      <End Role="ModMovel" EntitySet="ModMovel" />
+      <End Role="Moveis" EntitySet="Moveis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moveis_Plaqueta" Association="Self.FK_Moveis_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Moveis" EntitySet="Moveis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nobreak_Fabricante" Association="Self.FK_Nobreak_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Nobreak" EntitySet="Nobreak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nobreak_Plaqueta" Association="Self.FK_Nobreak_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Nobreak" EntitySet="Nobreak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ocorrencia_Funcionario" Association="Self.FK_Ocorrencia_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Ocorrencia" EntitySet="Ocorrencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ocorrencia_Plaqueta" Association="Self.FK_Ocorrencia_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Ocorrencia" EntitySet="Ocorrencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Office_Funcionario" Association="Self.FK_Office_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Office" EntitySet="Office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Office_ModSoftware" Association="Self.FK_Office_ModSoftware">
+      <End Role="ModSoftware" EntitySet="ModSoftware" />
+      <End Role="Office" EntitySet="Office" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pc_Funcionario" Association="Self.FK_Pc_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Pc" EntitySet="Pc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pc_ModPc" Association="Self.FK_Pc_ModPc">
+      <End Role="ModPc" EntitySet="ModPc" />
+      <End Role="Pc" EntitySet="Pc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pc_Plaqueta" Association="Self.FK_Pc_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Pc" EntitySet="Pc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pilha_Funcionario" Association="Self.FK_Pilha_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Pilha" EntitySet="Pilha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pilha_ModPilha" Association="Self.FK_Pilha_ModPilha">
+      <End Role="ModPilhas" EntitySet="ModPilhas" />
+      <End Role="Pilha" EntitySet="Pilha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ramal_Funcionario" Association="Self.FK_Ramal_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Ramal" EntitySet="Ramal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ramal_ModTelefone" Association="Self.FK_Ramal_ModTelefone">
+      <End Role="ModTelefone" EntitySet="ModTelefone" />
+      <End Role="Ramal" EntitySet="Ramal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Switch_Fabricante" Association="Self.FK_Switch_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Switch" EntitySet="Switch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Switch_Funcionario" Association="Self.FK_Switch_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Switch" EntitySet="Switch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Switch_Plaqueta" Association="Self.FK_Switch_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Switch" EntitySet="Switch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Switch_Setor" Association="Self.FK_Switch_Setor">
+      <End Role="Setor" EntitySet="Setor" />
+      <End Role="Switch" EntitySet="Switch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teclado_Fabricante" Association="Self.FK_Teclado_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Teclado" EntitySet="Teclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teclado_Funcionario" Association="Self.FK_Teclado_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Teclado" EntitySet="Teclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teclado_ModTeclado" Association="Self.FK_Teclado_ModTeclado">
+      <End Role="ModTeclado" EntitySet="ModTeclado" />
+      <End Role="Teclado" EntitySet="Teclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teclado_Plaqueta" Association="Self.FK_Teclado_Plaqueta">
+      <End Role="Plaqueta" EntitySet="Plaqueta" />
+      <End Role="Teclado" EntitySet="Teclado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Windows_Funcionario" Association="Self.FK_Windows_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Windows" EntitySet="Windows" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Windows_ModSoftware" Association="Self.FK_Windows_ModSoftware">
+      <End Role="ModSoftware" EntitySet="ModSoftware" />
+      <End Role="Windows" EntitySet="Windows" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

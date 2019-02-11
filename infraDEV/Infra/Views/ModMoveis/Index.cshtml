@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Infra.Models.ModMovel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Modelos Moveis</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </th>
+        <th>
+            Fabricante
+        </th>
+        <th>
+            Fornecedor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Referencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fabricante.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ModMovelID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ModMovelID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ModMovelID })
+        </td>
+    </tr>
+}
+
+</table>

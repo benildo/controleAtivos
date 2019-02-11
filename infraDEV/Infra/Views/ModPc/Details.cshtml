@@ -1,0 +1,58 @@
+﻿@model Infra.Models.ModPc
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>ModPc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Processador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Processador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fabricante.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fabricante.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ModPcID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

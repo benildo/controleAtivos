@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Infra.Models.Ramal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ramais</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar responsável: @Html.TextBox("SearchString")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </th>
+        <th>
+            @Html.ActionLink("Ip", "Index", new { sortOrder = ViewBag.IpSortParm })
+            @*@Html.DisplayNameFor(model => model.Ip)*@
+        </th>
+        <th>
+            @Html.ActionLink("Numero", "Index", new { sortOrder = ViewBag.NumeroSortParm })
+            @*@Html.DisplayNameFor(model => model.Numero)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModTelefone.Modelo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModTelefone.Modelo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.RamalID }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.RamalID }) |
+                @Html.ActionLink("Apagar", "Delete", new { id = item.RamalID })
+            </td>
+        </tr>
+    }
+</table>

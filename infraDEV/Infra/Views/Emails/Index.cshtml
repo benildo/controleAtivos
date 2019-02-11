@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Infra.Models.Email>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>E-mails Terceiros</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Finalidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Senha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Finalidade)
+        </td>
+        <td>
+            @Html.ActionLink("Editat", "Edit", new { id = item.EmailID }) |
+            @Html.ActionLink("Detalhes ", "Details", new { id = item.EmailID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id = item.EmailID })
+        </td>
+    </tr>
+}
+
+</table>
+

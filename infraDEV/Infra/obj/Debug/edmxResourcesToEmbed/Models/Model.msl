@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AtivosDBModelStoreContainer" CdmEntityContainer="AtivosDBEntities">
+    <EntitySetMapping Name="Cadeiras">
+      <EntityTypeMapping TypeName="AtivosDBModel.Cadeira">
+        <MappingFragment StoreEntitySet="Cadeira">
+          <ScalarProperty Name="CadeiraID" ColumnName="CadeiraID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="ModModelID" ColumnName="ModModelID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Celulars">
+      <EntityTypeMapping TypeName="AtivosDBModel.Celular">
+        <MappingFragment StoreEntitySet="Celular">
+          <ScalarProperty Name="CelularID" ColumnName="CelularID" />
+          <ScalarProperty Name="ModTelefoneID" ColumnName="ModTelefoneID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cftvs">
+      <EntityTypeMapping TypeName="AtivosDBModel.Cftv">
+        <MappingFragment StoreEntitySet="Cftv">
+          <ScalarProperty Name="CftvID" ColumnName="CftvID" />
+          <ScalarProperty Name="ModCftvID" ColumnName="ModCftvID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="AtivosDBModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="Conta" ColumnName="Conta" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Finalidade" ColumnName="Finalidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fabricantes">
+      <EntityTypeMapping TypeName="AtivosDBModel.Fabricante">
+        <MappingFragment StoreEntitySet="Fabricante">
+          <ScalarProperty Name="IdFabricante" ColumnName="IdFabricante" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fechaduras">
+      <EntityTypeMapping TypeName="AtivosDBModel.Fechadura">
+        <MappingFragment StoreEntitySet="Fechadura">
+          <ScalarProperty Name="FechaduraID" ColumnName="FechaduraID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="NumeroCadastrado" ColumnName="NumeroCadastrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fornecedors">
+      <EntityTypeMapping TypeName="AtivosDBModel.Fornecedor">
+        <MappingFragment StoreEntitySet="Fornecedor">
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModMovels">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModMovel">
+        <MappingFragment StoreEntitySet="ModMovel">
+          <ScalarProperty Name="ModMovelID" ColumnName="ModMovelID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModNobreaks">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModNobreak">
+        <MappingFragment StoreEntitySet="ModNobreak">
+          <ScalarProperty Name="ModNobreakID" ColumnName="ModNobreakID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModPilhas">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModPilha">
+        <MappingFragment StoreEntitySet="ModPilhas">
+          <ScalarProperty Name="ModPilhaID" ColumnName="ModPilhaID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModSoftwares">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModSoftware">
+        <MappingFragment StoreEntitySet="ModSoftware">
+          <ScalarProperty Name="ModSoftwareID" ColumnName="ModSoftwareID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModSwitches">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModSwitch">
+        <MappingFragment StoreEntitySet="ModSwitch">
+          <ScalarProperty Name="ModSwitchID" ColumnName="ModSwitchID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModTecladoes">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModTeclado">
+        <MappingFragment StoreEntitySet="ModTeclado">
+          <ScalarProperty Name="ModTecladoID" ColumnName="ModTecladoID" />
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModTelefones">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModTelefone">
+        <MappingFragment StoreEntitySet="ModTelefone">
+          <ScalarProperty Name="ModTelefoneID" ColumnName="ModTelefoneID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nobreaks">
+      <EntityTypeMapping TypeName="AtivosDBModel.Nobreak">
+        <MappingFragment StoreEntitySet="Nobreak">
+          <ScalarProperty Name="NobreakID" ColumnName="NobreakID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ocorrencias">
+      <EntityTypeMapping TypeName="AtivosDBModel.Ocorrencia">
+        <MappingFragment StoreEntitySet="Ocorrencia">
+          <ScalarProperty Name="OcorrenciaID" ColumnName="OcorrenciaID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Descrição" ColumnName="Descrição" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offices">
+      <EntityTypeMapping TypeName="AtivosDBModel.Office">
+        <MappingFragment StoreEntitySet="Office">
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="ModSoftwareID" ColumnName="ModSoftwareID" />
+          <ScalarProperty Name="Chave" ColumnName="Chave" />
+          <ScalarProperty Name="Ativado" ColumnName="Ativado" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pilhas">
+      <EntityTypeMapping TypeName="AtivosDBModel.Pilha">
+        <MappingFragment StoreEntitySet="Pilha">
+          <ScalarProperty Name="PilhaID" ColumnName="PilhaID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="ModPilhaID" ColumnName="ModPilhaID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setors">
+      <EntityTypeMapping TypeName="AtivosDBModel.Setor">
+        <MappingFragment StoreEntitySet="Setor">
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Switches">
+      <EntityTypeMapping TypeName="AtivosDBModel.Switch">
+        <MappingFragment StoreEntitySet="Switch">
+          <ScalarProperty Name="SwitchID" ColumnName="SwitchID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tecladoes">
+      <EntityTypeMapping TypeName="AtivosDBModel.Teclado">
+        <MappingFragment StoreEntitySet="Teclado">
+          <ScalarProperty Name="TecladoID" ColumnName="TecladoID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="ModTecladoID" ColumnName="ModTecladoID" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Windows">
+      <EntityTypeMapping TypeName="AtivosDBModel.Window">
+        <MappingFragment StoreEntitySet="Windows">
+          <ScalarProperty Name="WindowsID" ColumnName="WindowsID" />
+          <ScalarProperty Name="ModSoftwareID" ColumnName="ModSoftwareID" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="Ativado" ColumnName="Ativado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plaquetas">
+      <EntityTypeMapping TypeName="AtivosDBModel.Plaqueta">
+        <MappingFragment StoreEntitySet="Plaqueta">
+          <ScalarProperty Name="Ativada" ColumnName="Ativada" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModImpressoras">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModImpressora">
+        <MappingFragment StoreEntitySet="ModImpressoras">
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+          <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="ModImpressoraID" ColumnName="ModImpressoraID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModCftvs">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModCftv">
+        <MappingFragment StoreEntitySet="ModCftv">
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ModCftvID" ColumnName="ModCftvID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ramals">
+      <EntityTypeMapping TypeName="AtivosDBModel.Ramal">
+        <MappingFragment StoreEntitySet="Ramal">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Mac" ColumnName="Mac" />
+          <ScalarProperty Name="ModTelefoneID" ColumnName="ModTelefoneID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="RamalID" ColumnName="RamalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModPcs">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModPc">
+        <MappingFragment StoreEntitySet="ModPc">
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Memoria" ColumnName="Memoria" />
+          <ScalarProperty Name="Processador" ColumnName="Processador" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="ModPcID" ColumnName="ModPcID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pcs">
+      <EntityTypeMapping TypeName="AtivosDBModel.Pc">
+        <MappingFragment StoreEntitySet="Pc">
+          <ScalarProperty Name="Preço" ColumnName="Preço" />
+          <ScalarProperty Name="DataCompra" ColumnName="DataCompra" />
+          <ScalarProperty Name="Auditorado" ColumnName="Auditorado" />
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Série" ColumnName="Série" />
+          <ScalarProperty Name="NomePc" ColumnName="NomePc" />
+          <ScalarProperty Name="ModPcID" ColumnName="ModPcID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="PcID" ColumnName="PcID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModMonitors">
+      <EntityTypeMapping TypeName="AtivosDBModel.ModMonitor">
+        <MappingFragment StoreEntitySet="ModMonitor">
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FornecedorID" ColumnName="FornecedorID" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="ModMonitorID" ColumnName="ModMonitorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitors">
+      <EntityTypeMapping TypeName="AtivosDBModel.Monitor">
+        <MappingFragment StoreEntitySet="Monitor">
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FabricanteID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="MonitorID" ColumnName="MonitorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moveis">
+      <EntityTypeMapping TypeName="AtivosDBModel.Movei">
+        <MappingFragment StoreEntitySet="Moveis">
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="MovelID" ColumnName="MovelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impressoras">
+      <EntityTypeMapping TypeName="AtivosDBModel.Impressora">
+        <MappingFragment StoreEntitySet="Impressora">
+          <ScalarProperty Name="PlaquetaID" ColumnName="PlaquetaID" />
+          <ScalarProperty Name="ModImpressoraID" ColumnName="ModImpressoraID" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+          <ScalarProperty Name="ImpressoraID" ColumnName="ImpressoraID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcionarios">
+      <EntityTypeMapping TypeName="AtivosDBModel.Funcionario">
+        <MappingFragment StoreEntitySet="Funcionario">
+          <ScalarProperty Name="Aniversario" ColumnName="Aniversario" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="FuncionarioID" ColumnName="FuncionarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Infra.Models.ModImpressora>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Modelos Impressoras</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            Fabricante
+        </th>
+        <th>
+            Fornecedor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fabricante1.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor1.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ModImpressoraID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ModImpressoraID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id=item.ModImpressoraID })
+        </td>
+    </tr>
+}
+
+</table>

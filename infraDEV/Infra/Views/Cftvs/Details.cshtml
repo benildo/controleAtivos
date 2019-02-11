@@ -1,0 +1,42 @@
+﻿@model Infra.Models.Cftv
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cftv</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Local)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Local)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaqueta.PlaquetaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaqueta.PlaquetaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModCftv.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModCftv.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CftvID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

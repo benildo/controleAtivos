@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Infra.Models.Teclado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Teclados</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fabricante.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModTeclado.Modelo)
+        </th>
+        <th>
+            Plaqueta
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fabricante.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModTeclado.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plaqueta.PlaquetaID)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.TecladoID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.TecladoID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id = item.TecladoID })
+        </td>
+    </tr>
+}
+
+</table>
+

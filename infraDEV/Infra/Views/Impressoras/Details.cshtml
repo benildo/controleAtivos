@@ -1,0 +1,42 @@
+﻿@model Infra.Models.Impressora
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Impressora</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaqueta.PlaquetaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaqueta.PlaquetaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModImpressora.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModImpressora.Modelo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ImpressoraID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

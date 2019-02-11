@@ -1,0 +1,56 @@
+﻿@model Infra.Models.Cadeira
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Apagar</h2>
+
+<h3>Deseja realmente apagar este item?</h3>
+<div>
+    <h4>Cadeira</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModMovel.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModMovel.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaqueta.PlaquetaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaqueta.PlaquetaID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

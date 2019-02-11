@@ -1,0 +1,88 @@
+﻿@model Infra.Models.Pc
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Apagar</h2>
+
+<h3>Deseja realmente apagar este item?</h3>
+<div>
+    <h4>Pc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Série)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Série)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Auditorado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Auditorado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preço)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preço)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModPc.Processador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModPc.Processador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaqueta.PlaquetaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaqueta.PlaquetaID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

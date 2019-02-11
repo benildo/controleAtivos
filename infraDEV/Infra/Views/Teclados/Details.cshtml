@@ -1,0 +1,50 @@
+﻿@model Infra.Models.Teclado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Teclado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fabricante.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fabricante.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModTeclado.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModTeclado.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaqueta.PlaquetaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaqueta.PlaquetaID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.TecladoID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

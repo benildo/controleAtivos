@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Infra.Models.Setor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Setores</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table table-hover">
+    <tr> 
+        <th>
+            Setor
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SetorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.SetorID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.SetorID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id = item.SetorID })
+        </td>
+    </tr>
+}
+
+</table>
+
